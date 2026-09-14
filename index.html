@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dhanashalini S — Digital Image Specialist portfolio, AI, computer vision and software engineering.">
+<title>Dhanashalini S — Digital Image Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+<header class="topbar">
+  <a class="logo" href="#home"><span>DS</span><i>•</i></a>
+  <nav>
+    <a href="#work">Work</a><a href="#github">GitHub</a><a href="#artwork">Original Art</a><a href="#skills">Skills</a><a href="#about">About</a>
+  </nav>
+  <button class="resume-btn" onclick="openResume()">View Résumé ↗</button>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-left">
+    <div class="status"><span></span> AVAILABLE FOR DIGITAL IMAGE SPECIALIST OPPORTUNITIES</div>
+    <p class="kicker">DHANASHALINI S · SOFTWARE ENGINEER</p>
+    <h1>Digital work,<br><em>seen differently.</em></h1>
+    <p class="intro">I combine visual precision with software engineering and applied AI — from image enhancement and computer vision to production-ready developer platforms.</p>
+    <div class="hero-actions">
+      <a class="pill primary" href="#work">Explore visual work ↓</a>
+      <button class="pill ghost" onclick="openResume()">Open résumé ↗</button>
+    </div>
+  </div>
+  <div class="hero-visual" aria-label="Digital image specialist visual">
+    <div class="grid-lines"></div>
+    <div class="scan"></div>
+    <div class="image-core">
+      <div class="core-ring r1"></div><div class="core-ring r2"></div><div class="core-ring r3"></div>
+      <div class="core-mark">DS</div>
+    </div>
+    <div class="hud h1"><b>VISUAL INTELLIGENCE</b><span>AI / CV / XAI</span></div>
+    <div class="hud h2"><b>PRECISION</b><span>100% DETAIL</span></div>
+    <div class="hud h3"><b>ENGINE</b><span>PYTHON + VISION</span></div>
+  </div>
+</section>
+
+<section class="metrics">
+  <div><b id="repoMetric">—</b><span>public GitHub repositories</span></div>
+  <div><b>28%</b><span>classification accuracy gain</span></div>
+  <div><b>25%</b><span>inference latency reduction</span></div>
+  <div><b>2026</b><span>latest software internship</span></div>
+</section>
+
+<section id="work" class="section">
+  <div class="section-title"><div><span class="label">01 / VISUAL LAB</span><h2>Image & AI work</h2></div><p>Each project is presented as a visual artifact — not just a list of technologies.</p></div>
+  <div class="visual-grid">
+    <article class="visual-project featured" onclick="openProject('land')">
+      <div class="art satellite"><div class="sat-map"></div><span class="art-label">LAND / WATER · SEGMENTATION</span><div class="art-stat">CNN + U-NET</div></div>
+      <div class="vp-copy"><span>COMPUTER VISION</span><h3>AI GIS — Land & Water Detection</h3><p>Satellite-image segmentation with preprocessing, model training, FastAPI deployment and explainability.</p><button>View digital case study →</button></div>
+    </article>
+    <article class="visual-project" onclick="openProject('enhance')">
+      <div class="art portrait"><div class="portrait-light"></div><div class="portrait-subject"></div><span class="art-label">BEFORE → AFTER</span></div>
+      <div class="vp-copy"><span>IMAGE ENHANCEMENT</span><h3>Visual Quality Studio</h3><p>Image enhancement concepts: tone, detail, noise, sharpness and composition.</p><button>View visual workflow →</button></div>
+    </article>
+    <article class="visual-project" onclick="openProject('xai')">
+      <div class="art heatmap"><div class="heat-cells"></div><span class="art-label">EXPLAINABLE AI</span><div class="heat-caption">SHAP · LIME · GRAD-CAM</div></div>
+      <div class="vp-copy"><span>VISUAL EXPLANATION</span><h3>Explainable AI Intelligence</h3><p>Interpreting model outputs with feature importance and visual explanation workflows.</p><button>View digital case study →</button></div>
+    </article>
+    <article class="visual-project" onclick="openProject('aircraft')">
+      <div class="art waveform"><div class="wave"></div><span class="art-label">SIGNAL → INSIGHT</span></div>
+      <div class="vp-copy"><span>INTELLIGENCE PLATFORM</span><h3>Aircraft Vibration Intelligence</h3><p>Signal-processing concept using FFT, RMS, spectral features and explainable fault analysis.</p><button>View digital case study →</button></div>
+    </article>
+  </div>
+</section>
+
+<section id="github" class="section github-section">
+  <div class="section-title"><div><span class="label">02 / CODE ARCHIVE</span><h2>My GitHub, as a visual system.</h2></div><p>Live public repositories are pulled from <b>dhanashalini25</b>. Select any project to open its digital project card.</p></div>
+  <div class="repo-controls">
+    <div class="repo-count" id="repoCount">Loading repositories…</div>
+    <input id="repoSearch" type="search" placeholder="Search repositories…" aria-label="Search repositories">
+  </div>
+  <div id="repoGrid" class="repo-grid"></div>
+  <div id="repoError" class="repo-error" hidden>GitHub could not be reached right now. Showing the featured repository set instead.</div>
+</section>
+
+<section id="artwork" class="section artwork-section">
+  <div class="section-title"><div><span class="label">02 / ORIGINAL ART</span><h2>My digital art, from sketch to finish.</h2></div><p>Original artwork created by me — showing the complete visual journey from hand-drawn construction to ink, color and final digital rendering.</p></div>
+  <div class="artwork-grid">
+    <article class="artwork-card" onclick="openArtwork('sketch')"><div class="artwork-img"><img src="assets/artwork/sketch.jpg" alt="Original pencil sketch by Dhanashalini"></div><div><span>01 · FOUNDATION</span><h3>Pencil Sketch</h3><p>Freehand construction, proportions and line development.</p></div></article>
+    <article class="artwork-card" onclick="openArtwork('inked')"><div class="artwork-img"><img src="assets/artwork/inked-colored.jpg" alt="Original inked and colored artwork by Dhanashalini"></div><div><span>02 · TRADITIONAL COLOR</span><h3>Inked &amp; Colored</h3><p>Clean ink linework with a hand-colored finish.</p></div></article>
+    <article class="artwork-card" onclick="openArtwork('digital')"><div class="artwork-img"><img src="assets/artwork/digital-painting.jpg" alt="Original digital painting by Dhanashalini"></div><div><span>03 · DIGITAL FINISH</span><h3>Digital Painting</h3><p>Lighting, texture, depth and final rendering rebuilt digitally.</p></div></article>
+  </div>
+  <div class="art-process"><div><b>SKETCH</b><span>Construction</span></div><i>→</i><div><b>INK + COLOR</b><span>Traditional finish</span></div><i>→</i><div><b>DIGITAL</b><span>Final render</span></div></div>
+</section>
+
+<section id="skills" class="section dark">
+  <div class="section-title"><div><span class="label">03 / TOOLKIT</span><h2>Technical + visual toolkit</h2></div></div>
+  <div class="skill-matrix">
+    <div><small>IMAGE / VISION</small><h3>Computer Vision</h3><p>Image preprocessing · segmentation · CNN · U-Net · feature extraction · image quality analysis</p></div>
+    <div><small>AI / ML</small><h3>Explainable AI</h3><p>PyTorch · TensorFlow · scikit-learn · SHAP · LIME · Grad-CAM · feature engineering</p></div>
+    <div><small>ENGINEERING</small><h3>Production Systems</h3><p>Python · TypeScript · Node.js · FastAPI · REST APIs · PostgreSQL · Redis · Docker</p></div>
+    <div><small>FRONTEND</small><h3>Digital Experiences</h3><p>React · Next.js · Tailwind CSS · HTML5 · CSS3 · responsive UI · interaction design</p></div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div><span class="label">04 / PROFILE</span><h2>Technical thinking.<br><em>Visual discipline.</em></h2></div>
+  <div class="about-copy">
+    <p>I’m <b>Dhanashalini S</b>, a Software Engineer with a B.Tech in Information Technology. I build backend and applied-AI systems in Python, TypeScript and Node.js, while bringing a strong interest in digital image processing and computer vision.</p>
+    <p>At Truerize IQ Strategic Solutions Pvt. Ltd., I worked on computer-vision and agro-based machine-learning workflows, including semantic segmentation, feature extraction, model deployment and explainability.</p>
+    <div class="profile-facts">
+      <div><span>EDUCATION</span><b>B.Tech, Information Technology</b><small>Knowledge Institute of Technology · 2025 · CGPA 7.8/10</small></div>
+      <div><span>EXPERIENCE</span><b>Software Engineer Intern</b><small>Truerize IQ Strategic Solutions Pvt. Ltd. · Mar–May 2026</small></div>
+      <div><span>CERTIFICATIONS</span><b>Google Cybersecurity + Data Analytics</b><small>Professional Certificates · Coursera</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <span class="label">05 / CONTACT</span>
+  <h2>Let’s make the next<br><em>image worth remembering.</em></h2>
+  <div class="contact-row">
+    <a href="mailto:dhanashalini2001@gmail.com">dhanashalini2001@gmail.com ↗</a>
+    <a href="tel:+916379494557">+91 63794 94557</a>
+    <a href="https://github.com/dhanashalini25" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="https://linkedin.com/in/dhanashalini-s" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+</section>
+</main>
+
+<footer><span>DS</span> Digital Image Specialist Portfolio · 2026</footer>
+
+<!-- Artwork viewer -->
+<div class="modal" id="artworkModal" aria-hidden="true">
+  <div class="modal-backdrop" onclick="closeModal('artworkModal')"></div>
+  <div class="artwork-modal">
+    <div class="modal-head"><div><span class="label">ORIGINAL ARTWORK</span><h3 id="artworkTitle">Artwork</h3></div><button onclick="closeModal('artworkModal')">×</button></div>
+    <div class="artwork-view"><img id="artworkViewer" src="" alt="Original artwork"></div>
+    <div class="artwork-caption" id="artworkCaption"></div>
+    <div class="modal-foot"><button class="pill ghost" onclick="closeModal('artworkModal')">Close</button></div>
+  </div>
+</div>
+
+<!-- Resume viewer -->
+<div class="modal" id="resumeModal" aria-hidden="true">
+  <div class="modal-backdrop" onclick="closeModal('resumeModal')"></div>
+  <div class="resume-modal">
+    <div class="modal-head"><div><span class="label">DOCUMENT VIEWER</span><h3>Dhanashalini S — Résumé</h3></div><button onclick="closeModal('resumeModal')">×</button></div>
+    <iframe src="assets/Dhanashalini_Information_Technology.pdf" title="Dhanashalini S Resume"></iframe>
+    <div class="modal-foot"><a class="pill primary" href="assets/Dhanashalini_Information_Technology.pdf" target="_blank">Open PDF ↗</a><button class="pill ghost" onclick="closeModal('resumeModal')">Close</button></div>
+  </div>
+</div>
+
+<!-- Repository / digital image viewer -->
+<div class="modal" id="repoModal" aria-hidden="true">
+  <div class="modal-backdrop" onclick="closeModal('repoModal')"></div>
+  <div class="repo-modal">
+    <div class="modal-head"><div><span class="label">DIGITAL REPOSITORY CARD</span><h3 id="repoTitle">Repository</h3></div><button onclick="closeModal('repoModal')">×</button></div>
+    <div class="repo-poster" id="repoPoster"></div>
+    <div class="repo-detail"><div><span class="label">DESCRIPTION</span><p id="repoDescription"></p></div><div class="repo-meta" id="repoMeta"></div></div>
+    <div class="modal-foot"><a id="repoLink" class="pill primary" target="_blank" rel="noopener">Open GitHub ↗</a><button class="pill ghost" onclick="closeModal('repoModal')">Close</button></div>
+  </div>
+</div>
+
+<!-- Case study viewer -->
+<div class="modal" id="projectModal" aria-hidden="true">
+  <div class="modal-backdrop" onclick="closeModal('projectModal')"></div>
+  <div class="case-modal">
+    <div class="modal-head"><div><span class="label">DIGITAL CASE STUDY</span><h3 id="projectTitle"></h3></div><button onclick="closeModal('projectModal')">×</button></div>
+    <div id="projectBody"></div>
+    <div class="modal-foot"><button class="pill ghost" onclick="closeModal('projectModal')">Close</button></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
